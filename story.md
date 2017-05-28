@@ -1,18 +1,18 @@
 ***
 `Given`
-- Integer values separated by + symbols are in equation field
+- Numerical values separated by + symbols are in equation field
 
 `When`
 - User clicks the *equal* button
 
 `Then`
-- Sum of all integer values should display to the right of the equal button
+- Sum of all numerical values should display to the right of the equal button
 
 
 ***
 
 `Given`
-- Non-Integer values separated by + symbols are in equation field
+- Non Numerical values separated by + symbols are in equation field
 
 `When`
 - User clicks the *equal* button
