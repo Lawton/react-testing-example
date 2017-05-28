@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Math2 as math } from '../utils/math';
-// import { Math4 as math } from '../utils/math';
+// import { Math2 as math } from '../utils/math';
+import { Math4 as math } from '../utils/math';
 
 export default class Calculator extends Component {
   constructor(props) {

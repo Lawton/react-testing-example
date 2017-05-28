@@ -2,8 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from 'chai';
 import Calculator from '../../src/components/calculator';
-import {Math2 as math} from '../../src/utils/math';
-// import {Math4 as math} from '../../src/utils/math';
+// import {Math2 as math} from '../../src/utils/math';
+import {Math4 as math} from '../../src/utils/math';
 import sinon from 'sinon';
 
 describe('test addition component', () => {
