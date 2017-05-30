@@ -43,10 +43,11 @@ describe('test addition component', () => {
     const resultText = subject.find('.result').text();
     expect(resultText).to.equal('2');
   });
-  //
-  it('displays error message when given invalid equation', () => {
+
+  it('displays error message and clears output label when given invalid equation', () => {
     //Arrange
     mockParseEquation.returns(NaN);
+    subject.setState({calculatedResult: 14})
 
     //Act
     subject.find('button').simulate('click');
@@ -54,5 +55,20 @@ describe('test addition component', () => {
     //Assert
     const errorMessage = subject.find('.error-message').text();
     expect(errorMessage).to.equal('Invalid input. Please input only numbers.');
+    const resultText = subject.find('.result').text();
+    expect(resultText).to.equal('');
+  });
+
+  it('removes error message when given valid equation', () => {
+    //Arrange
+    mockParseEquation.returns(15);
+    subject.setState({errorMessage:'Invalid input. Please input only numbers.'})
+
+    //Act
+    subject.find('button').simulate('click');
+
+    //Assert
+    const errorMessage = subject.find('.error-message').text();
+    expect(errorMessage).to.equal('');
   });
 });

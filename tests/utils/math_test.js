@@ -15,14 +15,6 @@ describe("test addition", () => {
     expect(rtnValue).to.equal(2);
   });
 
-  // it('invalid input', () => {
-  //   //Arrange/Act
-  //   const rtnValue = math.parseEquation('1 + one');
-  //
-  //   //Assert
-  //   expect(rtnValue).to.equal(NaN);
-  // });
-
   it('invalid input', () => {
     //Arrange/Act
     const rtnValue = math.parseEquation('1 + one');
@@ -30,7 +22,7 @@ describe("test addition", () => {
     //Assert
     expect(rtnValue).to.be.NaN;
   });
-  //
+
   it('invalid input between numbers', () => {
     //Arrange/Act
     const rtnValue = math.parseEquation('1 + 123asdf453');
