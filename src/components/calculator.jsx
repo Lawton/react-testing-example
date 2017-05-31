@@ -14,7 +14,6 @@ export default class Calculator extends Component {
   handleValueChange(event) {
     this.setState({ equation: event.target.value });
   }
-
   render() {
     return (
       <div>
